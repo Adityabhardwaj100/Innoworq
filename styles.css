@@ -1190,7 +1190,9 @@ section {
     display: flex;
     align-items: baseline;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 4px;
+    text-align: center;
 }
 
 .currency {
