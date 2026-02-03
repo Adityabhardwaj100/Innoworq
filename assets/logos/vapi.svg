@@ -1,0 +1,11 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Vapi Logo - Blue voice wave design -->
+  <defs>
+    <linearGradient id="vapiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="url(#vapiGrad)"/>
+  <path d="M14 24V24M20 18V30M26 14V34M32 18V30M38 24V24" stroke="white" stroke-width="4" stroke-linecap="round"/>
+</svg>

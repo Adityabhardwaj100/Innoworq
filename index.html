@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Innoworq Academy AI Generalist Course - 40-hour hands-on training in modern AI tools, workflows, and ethical AI practices. Get industry-ready skills for ₹25,000 (includes tools worth ₹10,000).">
+    <title>Innoworq Academy | AI Generalist Certification Course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-text">Innoworq Academy</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#features">Features</a>
+                <a href="#curriculum">Curriculum</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <a href="#" class="nav-cta" onclick="openContactModal(); return false;">Enroll Now</a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <span class="badge-dot"></span>
+                Professional Certification Program
+            </div>
+            <h1 class="hero-title animate-fade-in-up">
+                Become an<br>
+                <span class="gradient-text">AI Generalist</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up delay-1">
+                Master modern AI tools, LLMs, prompt engineering, and automation in just 40 hours.
+                Get industry-ready skills that employers are actively seeking.
+            </p>
+            <div class="hero-stats animate-fade-in-up delay-2">
+                <div class="stat">
+                    <span class="stat-number" data-count="40">0</span>
+                    <span class="stat-label">Hours</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="9">0</span>
+                    <span class="stat-label">Modules</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">₹25K</span>
+                    <span class="stat-label">Investment</span>
+                </div>
+            </div>
+            <div class="hero-cta animate-fade-in-up delay-3">
+                <a href="#" class="btn btn-primary" onclick="openContactModal(); return false;">
+                    <span>Start Learning</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="#curriculum" class="btn btn-secondary">View Curriculum</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag animate-on-scroll">Why Choose Us</span>
+                <h2 class="section-title animate-on-scroll">
+                    Built for the <span class="gradient-text">AI Era</span>
+                </h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3>Hands-On Learning</h3>
+                    <p>Real projects, live demos, and lab sessions. No boring theory-only lectures.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                    </div>
+                    <h3>Industry-Ready Skills</h3>
+                    <p>Learn what companies actually need: LLMs, automation, prompt engineering & more.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="8" r="5" />
+                            <path d="M20 21a8 8 0 10-16 0" />
+                        </svg>
+                    </div>
+                    <h3>Career Portfolio</h3>
+                    <p>Graduate with a professional portfolio showcasing your AI skills to employers.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                            <path d="M22 4L12 14.01l-3-3" />
+                        </svg>
+                    </div>
+                    <h3>Professional Certificate</h3>
+                    <p>Earn an AI Generalist Professional Certificate recognized by industry partners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Showcase Section - Infinite Marquee -->
+    <section class="tools-showcase" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag animate-on-scroll">Powerful Tools</span>
+                <h2 class="section-title animate-on-scroll">
+                    Master <span class="gradient-text">Industry Tools</span>
+                </h2>
+                <p class="section-subtitle animate-on-scroll">12 cutting-edge AI tools you'll master in this course</p>
+            </div>
+        </div>
+        <div class="tools-marquee">
+            <div class="tools-track">
+                <!-- First set of tools -->
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #ff3366;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/weavy.svg" alt="Weavy" class="tool-logo">
+                    </div>
+                    <h3>Weavy</h3>
+                    <p class="tool-category">Design Workflows</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #7c3aed;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/higgsfield.svg" alt="Higgsfield" class="tool-logo">
+                    </div>
+                    <h3>Higgsfield</h3>
+                    <p class="tool-category">Video Generation</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #22c55e;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/heygen.svg" alt="HeyGen" class="tool-logo">
+                    </div>
+                    <h3>HeyGen</h3>
+                    <p class="tool-category">AI Avatars</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #3b82f6;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/vapi.svg" alt="Vapi" class="tool-logo">
+                    </div>
+                    <h3>Vapi</h3>
+                    <p class="tool-category">Voice AI Agents</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #f97316;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/elevenlabs.svg" alt="ElevenLabs" class="tool-logo">
+                    </div>
+                    <h3>ElevenLabs</h3>
+                    <p class="tool-category">Voice Synthesis</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #ef4444;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/twilio.svg" alt="Twilio" class="tool-logo">
+                    </div>
+                    <h3>Twilio</h3>
+                    <p class="tool-category">Communication APIs</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #d946ef;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/suno.svg" alt="Suno" class="tool-logo">
+                    </div>
+                    <h3>Suno</h3>
+                    <p class="tool-category">AI Music</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #a855f7;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/antigravity.svg" alt="Antigravity" class="tool-logo">
+                    </div>
+                    <h3>Antigravity</h3>
+                    <p class="tool-category">AI Coding</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #ea580c;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/n8n.svg" alt="n8n" class="tool-logo">
+                    </div>
+                    <h3>n8n</h3>
+                    <p class="tool-category">Workflow Automation</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #dabb9e;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/claude.svg" alt="Claude" class="tool-logo">
+                    </div>
+                    <h3>Claude</h3>
+                    <p class="tool-category">Advanced LLM</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #6d28d9;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/make.svg" alt="Make" class="tool-logo">
+                    </div>
+                    <h3>Make.com</h3>
+                    <p class="tool-category">No-Code Automation</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #0ea5e9;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/kling.svg" alt="Kling" class="tool-logo">
+                    </div>
+                    <h3>Kling</h3>
+                    <p class="tool-category">Creative AI</p>
+                </div>
+
+                <!-- Duplicate set for seamless infinite loop -->
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #ff3366;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/weavy.svg" alt="Weavy" class="tool-logo">
+                    </div>
+                    <h3>Weavy</h3>
+                    <p class="tool-category">Design Workflows</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #7c3aed;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/higgsfield.svg" alt="Higgsfield" class="tool-logo">
+                    </div>
+                    <h3>Higgsfield</h3>
+                    <p class="tool-category">Video Generation</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #22c55e;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/heygen.svg" alt="HeyGen" class="tool-logo">
+                    </div>
+                    <h3>HeyGen</h3>
+                    <p class="tool-category">AI Avatars</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #3b82f6;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/vapi.svg" alt="Vapi" class="tool-logo">
+                    </div>
+                    <h3>Vapi</h3>
+                    <p class="tool-category">Voice AI Agents</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #f97316;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/elevenlabs.svg" alt="ElevenLabs" class="tool-logo">
+                    </div>
+                    <h3>ElevenLabs</h3>
+                    <p class="tool-category">Voice Synthesis</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #ef4444;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/twilio.svg" alt="Twilio" class="tool-logo">
+                    </div>
+                    <h3>Twilio</h3>
+                    <p class="tool-category">Communication APIs</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #d946ef;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/suno.svg" alt="Suno" class="tool-logo">
+                    </div>
+                    <h3>Suno</h3>
+                    <p class="tool-category">AI Music</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #a855f7;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/antigravity.svg" alt="Antigravity" class="tool-logo">
+                    </div>
+                    <h3>Antigravity</h3>
+                    <p class="tool-category">AI Coding</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #ea580c;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/n8n.svg" alt="n8n" class="tool-logo">
+                    </div>
+                    <h3>n8n</h3>
+                    <p class="tool-category">Workflow Automation</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #dabb9e;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/claude.svg" alt="Claude" class="tool-logo">
+                    </div>
+                    <h3>Claude</h3>
+                    <p class="tool-category">Advanced LLM</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #6d28d9;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/make.svg" alt="Make" class="tool-logo">
+                    </div>
+                    <h3>Make.com</h3>
+                    <p class="tool-category">No-Code Automation</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #0ea5e9;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/kling.svg" alt="Kling" class="tool-logo">
+                    </div>
+                    <h3>Kling</h3>
+                    <p class="tool-category">Creative AI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section class="curriculum" id="curriculum">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag animate-on-scroll">Curriculum</span>
+                <h2 class="section-title animate-on-scroll">
+                    9 Comprehensive <span class="gradient-text">Modules</span>
+                </h2>
+            </div>
+            <div class="modules-grid">
+                <div class="module-card animate-on-scroll">
+                    <div class="module-number">01</div>
+                    <div class="module-content">
+                        <h3>Introduction to AI Generalist Role</h3>
+                        <p>Understand the AI landscape and your role in it</p>
+                        <span class="module-duration">2 Hours</span>
+                    </div>
+                </div>
+                <div class="module-card animate-on-scroll">
+                    <div class="module-number">02</div>
+                    <div class="module-content">
+                        <h3>AI Fundamentals & Core Concepts</h3>
+                        <p>Master the building blocks of artificial intelligence</p>
+                        <span class="module-duration">6 Hours</span>
+                    </div>
+                </div>
+                <div class="module-card animate-on-scroll">
+                    <div class="module-number">03</div>
+                    <div class="module-content">
+                        <h3>Foundations of LLMs & RAG</h3>
+                        <p>Deep dive into Large Language Models and Retrieval-Augmented Generation</p>
+                        <span class="module-duration">5 Hours</span>
+                    </div>
+                </div>
+                <div class="module-card animate-on-scroll">
+                    <div class="module-number">04</div>
+                    <div class="module-content">
+                        <h3>Advanced Prompt Engineering</h3>
+                        <p>Craft prompts that unlock AI's full potential</p>
+                        <span class="module-duration">4 Hours</span>
+                    </div>
+                </div>
+                <div class="module-card animate-on-scroll">
+                    <div class="module-number">05</div>
+                    <div class="module-content">
+                        <h3>Diffusion Models & Generative Media</h3>
+                        <p>Create stunning visuals with AI image generation</p>
+                        <span class="module-duration">4 Hours</span>
+                    </div>
+                </div>
+                <div class="module-card animate-on-scroll">
+                    <div class="module-number">06</div>
+                    <div class="module-content">
+                        <h3>Vibe Coding – Full-Stack Foundations</h3>
+                        <p>Build complete applications with AI assistance</p>
+                        <span class="module-duration">10 Hours</span>
+                    </div>
+                </div>
+                <div class="module-card animate-on-scroll">
+                    <div class="module-number">07</div>
+                    <div class="module-content">
+                        <h3>Agentic Workflows & Automation</h3>
+                        <p>Design intelligent agents that work for you</p>
+                        <span class="module-duration">4 Hours</span>
+                    </div>
+                </div>
+                <div class="module-card animate-on-scroll">
+                    <div class="module-number">08</div>
+                    <div class="module-content">
+                        <h3>Data Ethics & Responsible AI</h3>
+                        <p>Build AI solutions that are ethical and trustworthy</p>
+                        <span class="module-duration">2 Hours</span>
+                    </div>
+                </div>
+                <div class="module-card animate-on-scroll">
+                    <div class="module-number">09</div>
+                    <div class="module-content">
+                        <h3>Future Careers & Portfolio Building</h3>
+                        <p>Launch your AI career with a killer portfolio</p>
+                        <span class="module-duration">3 Hours</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience Section -->
+    <section class="audience">
+        <div class="container">
+            <div class="audience-content animate-on-scroll">
+                <h2 class="section-title">Who Is This <span class="gradient-text">For?</span></h2>
+                <div class="audience-tags">
+                    <span class="tag">BCA Students</span>
+                    <span class="tag">BE/B.Tech (CS)</span>
+                    <span class="tag">BBA (Tech)</span>
+                    <span class="tag">Career Switchers</span>
+                    <span class="tag">Working Professionals</span>
+                    <span class="tag">Tech Enthusiasts</span>
+                </div>
+                <p class="audience-note">Perfect as a value-added certification for students from any stream looking to
+                    enter the AI space.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag animate-on-scroll">Investment</span>
+                <h2 class="section-title animate-on-scroll">
+                    Your Future in AI<br>
+                    <span class="gradient-text">Starts Here</span>
+                </h2>
+            </div>
+            <div class="pricing-card animate-on-scroll">
+                <div class="pricing-glow"></div>
+                <div class="pricing-header">
+                    <span class="pricing-label">AI Generalist Professional Certificate</span>
+                    <div class="pricing-amount">
+                        <span class="currency">₹</span>
+                        <span class="price">25,000</span>
+                        <span class="period">per student</span>
+                    </div>
+                </div>
+                <div class="pricing-features">
+                    <div class="pricing-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                            <path d="M22 4L12 14.01l-3-3" />
+                        </svg>
+                        <span>40 Contact Hours of Training</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                            <path d="M22 4L12 14.01l-3-3" />
+                        </svg>
+                        <span>9 Comprehensive Modules</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                            <path d="M22 4L12 14.01l-3-3" />
+                        </svg>
+                        <span>Blended Learning Format</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                            <path d="M22 4L12 14.01l-3-3" />
+                        </svg>
+                        <span>Live Demonstrations & Labs</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                            <path d="M22 4L12 14.01l-3-3" />
+                        </svg>
+                        <span>Professional Portfolio</span>
+                    </div>
+                    <div class="pricing-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                            <path d="M22 4L12 14.01l-3-3" />
+                        </svg>
+                        <span>Industry-Recognized Certificate</span>
+                    </div>
+                    <div class="pricing-feature pricing-highlight">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                            <path d="M22 4L12 14.01l-3-3" />
+                        </svg>
+                        <span>AI Tools Worth ₹10,000 Included!</span>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary btn-large" onclick="openContactModal(); return false;">
+                    <span>Enroll Now</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <p class="pricing-note">Contact your college for group enrollment options</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag animate-on-scroll">Career Opportunities</span>
+                <h2 class="section-title animate-on-scroll">
+                    Land Jobs In <span class="gradient-text">Top Industries</span>
+                </h2>
+            </div>
+            <div class="industries-grid animate-on-scroll">
+                <div class="industry-item">
+                    <span class="industry-icon">🏥</span>
+                    <span>Healthcare</span>
+                </div>
+                <div class="industry-item">
+                    <span class="industry-icon">💰</span>
+                    <span>Finance</span>
+                </div>
+                <div class="industry-item">
+                    <span class="industry-icon">💻</span>
+                    <span>Tech/IT</span>
+                </div>
+                <div class="industry-item">
+                    <span class="industry-icon">📱</span>
+                    <span>Digital Marketing</span>
+                </div>
+                <div class="industry-item">
+                    <span class="industry-icon">🔄</span>
+                    <span>Digital Transformation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag animate-on-scroll">FAQ</span>
+                <h2 class="section-title animate-on-scroll">
+                    Got <span class="gradient-text">Questions?</span>
+                </h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>What prerequisites do I need?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Basic computer literacy is all you need. The program is designed to take you from
+                            fundamentals to advanced AI skills, regardless of your technical background.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>How is the program delivered?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The program uses a blended format combining interactive lectures, live demonstrations, and
+                            hands-on lab sessions for maximum learning effectiveness.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>What certificate will I receive?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Upon successful completion, you'll receive an AI Generalist Professional Certificate that
+                            validates your expertise in modern AI tools and workflows.</p>
+                    </div>
+                </div>
+                <div class="faq-item animate-on-scroll">
+                    <button class="faq-question">
+                        <span>Can my college partner with you?</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We offer college partnership programs with special group enrollment rates. Contact us to
+                            discuss how we can bring this program to your institution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content animate-on-scroll">
+                <h2>Ready to <span class="gradient-text">Future-Proof</span> Your Career?</h2>
+                <p>Join the AI revolution. Start your journey with Innoworq Academy today.</p>
+                <a href="#" class="btn btn-primary btn-large" onclick="openContactModal(); return false;">
+                    <span>Get Started Now</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">◈</span>
+                        <span class="logo-text">Innoworq Academy</span>
+                    </a>
+                    <p>Bridging the gap between theoretical AI knowledge and industry-ready applications.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Program</h4>
+                        <a href="#features">Features</a>
+                        <a href="#curriculum">Curriculum</a>
+                        <a href="#pricing">Pricing</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#faq">FAQ</a>
+                        <a href="mailto:contact@innoworqacademy.com">Contact Us</a>
+                        <a href="#">Partner With Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Innoworq Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeContactModal()" aria-label="Close modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="modal-header">
+                <h3>Start Your AI Journey</h3>
+                <p>Fill in your details and we'll get back to you shortly!</p>
+            </div>
+            <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+                    <textarea id="message" name="message" rows="4"
+                        placeholder="Tell us about your learning goals..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large btn-full">
+                    <span>Submit Enquiry</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </form>
+            <div class="form-success" id="formSuccess" style="display: none;">
+                <div class="success-icon">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                        <path d="M22 4L12 14.01l-3-3" />
+                    </svg>
+                </div>
+                <h3>Thank You!</h3>
+                <p>Your enquiry has been submitted successfully. Our team will contact you shortly.</p>
+                <button class="btn btn-secondary" onclick="closeContactModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
