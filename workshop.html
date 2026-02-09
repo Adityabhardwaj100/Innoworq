@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Innoworq Academy AI Workshop - 10-hour workshop + 2 Day Masterclass covering Vibe Coding, AI Automation, and Diffusion Coding. ONLY ₹500.">
+    <title>Innoworq Academy | AI Workshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="./favicon.png">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="./innoworq-logo.png" alt="Innoworq Logo" class="logo-img">
+                <span class="logo-text">Innoworq Academy</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#curriculum">Curriculum</a>
+                <a href="workshop.html" class="active">Workshop</a>
+                <a href="index.html#pricing">Pricing</a>
+                <a href="index.html#faq">FAQ</a>
+            </div>
+            <a href="#" class="nav-cta" onclick="openContactModal(); return false;">Enroll Now</a>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <span class="badge-dot"></span>
+                Limited Time Offer
+            </div>
+            <h1 class="hero-title animate-fade-in-up">
+                Ultimate <span class="gradient-text">AI Workshop</span><br>
+                & Training
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up delay-1">
+                10-Hour Intense Workshop + 2 Day Masterclass.
+                Master Vibe Coding, AI Automation, and Diffusion Models.
+            </p>
+            <div class="hero-stats animate-fade-in-up delay-2">
+                <div class="stat">
+                    <span class="stat-number">10 Hours</span>
+                    <span class="stat-label">+ 2 Day Masterclass</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Core Topics</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">₹500</span>
+                    <span class="stat-label">Investment</span>
+                </div>
+            </div>
+            <div class="hero-cta animate-fade-in-up delay-3">
+                <a href="#" onclick="openContactModal(); return false;" class="btn btn-primary btn-large">
+                    <span>Free Enroll</span>
+                </a>
+                <a href="#topics" class="btn btn-secondary">View Topics</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Section -->
+    <section class="features" id="topics">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag animate-on-scroll">What You'll Learn</span>
+                <h2 class="section-title animate-on-scroll">
+                    Workshop <span class="gradient-text">Highlights</span>
+                </h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <h3>Vibe Coding</h3>
+                    <p>Learn to code with the flow. Leverage AI to write code faster, cleaner, and with more intuition.
+                    </p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <h3>AI Automation</h3>
+                    <p>Automate boring tasks. Build agents and workflows that work for you 24/7 using n8n and Make.com.
+                    </p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </div>
+                    <h3>Diffusion Coding (10 Hours)</h3>
+                    <p>Deep dive into generative media. Master Stable Diffusion, Midjourney, and video generation tools.
+                    </p>
+                    <span class="module-duration">10 Hours Special Module</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag animate-on-scroll">Success Stories</span>
+                <h2 class="section-title animate-on-scroll">
+                    Student <span class="gradient-text">Testimonials</span>
+                </h2>
+            </div>
+        </div>
+        <!-- Testimonials Marquee -->
+        <div class="testimonials-marquee">
+            <div class="testimonials-track">
+                <!-- Original Testimonials -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "This workshop changed my career path completely. The automation module alone was worth 10x the
+                        price."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Amit Patel</h4>
+                            <p>Freelance Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "I never thought coding could be this intuitive. 'Vibe Coding' is exactly what I was missing."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sneha Reddy</h4>
+                            <p>BCA Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Incredible value. 48 hours of hands-on learning plus the 40-hour module? Unbeatable."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div class="author-info">
+                            <h4>Rahul Verma</h4>
+                            <p>Tech Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Testimonials -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "The AI automation tools are a game changer. I've automated 80% of my daily workflow."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">P</div>
+                        <div class="author-info">
+                            <h4>Priya Sharma</h4>
+                            <p>Data Analyst</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Built my MVP in a weekend using the Vibe Coding techniques. This course is a cheat code."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">D</div>
+                        <div class="author-info">
+                            <h4>David Chen</h4>
+                            <p>Startup Founder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Generated a year's worth of content in hours using the diffusion models taught here."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sarah Jenkins</h4>
+                            <p>Marketing Lead</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Finally understand how to leverage LLMs effectively. It's not just prompting, it's
+                        engineering."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div class="author-info">
+                            <h4>Marcus Johnson</h4>
+                            <p>Product Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "The design workflows with AI have doubled my creative output without burnout."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">E</div>
+                        <div class="author-info">
+                            <h4>Emily Zhang</h4>
+                            <p>UX Designer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duplicate Set for Smooth Loop (First 3 repeating) -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "This workshop changed my career path completely. The automation module alone was worth 10x the
+                        price."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div class="author-info">
+                            <h4>Amit Patel</h4>
+                            <p>Freelance Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "I never thought coding could be this intuitive. 'Vibe Coding' is exactly what I was missing."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div class="author-info">
+                            <h4>Sneha Reddy</h4>
+                            <p>BCA Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Incredible value. 48 hours of hands-on learning plus the 40-hour module? Unbeatable."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div class="author-info">
+                            <h4>Rahul Verma</h4>
+                            <p>Tech Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Showcase Section - Infinite Marquee (Reused) -->
+    <section class="tools-showcase" id="tools">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag animate-on-scroll">Toolkit</span>
+                <h2 class="section-title animate-on-scroll">
+                    Tools You Will <span class="gradient-text">Master</span>
+                </h2>
+            </div>
+        </div>
+        <div class="tools-marquee">
+            <div class="tools-track">
+                <!-- First set of tools -->
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #ff3366;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/weavy.png" alt="Weavy" class="tool-logo">
+                    </div>
+                    <h3>Weavy</h3>
+                    <p class="tool-category">Design Workflows</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #7c3aed;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/higgsfield.png" alt="Higgsfield" class="tool-logo">
+                    </div>
+                    <h3>Higgsfield</h3>
+                    <p class="tool-category">Video Generation</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #22c55e;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/Heygen.png" alt="HeyGen" class="tool-logo">
+                    </div>
+                    <h3>HeyGen</h3>
+                    <p class="tool-category">AI Avatars</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #3b82f6;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/vapi.svg" alt="Vapi" class="tool-logo">
+                    </div>
+                    <h3>Vapi</h3>
+                    <p class="tool-category">Voice AI Agents</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #f97316;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/elevenlabs.svg" alt="ElevenLabs" class="tool-logo">
+                    </div>
+                    <h3>ElevenLabs</h3>
+                    <p class="tool-category">Voice Synthesis</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #ef4444;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/twilio.svg" alt="Twilio" class="tool-logo">
+                    </div>
+                    <h3>Twilio</h3>
+                    <p class="tool-category">Communication APIs</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #d946ef;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/suno.PNG" alt="Suno" class="tool-logo">
+                    </div>
+                    <h3>Suno</h3>
+                    <p class="tool-category">AI Music</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #a855f7;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/antigravity.png" alt="Antigravity" class="tool-logo">
+                    </div>
+                    <h3>Antigravity</h3>
+                    <p class="tool-category">AI Coding</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #ea580c;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/n8n.svg" alt="n8n" class="tool-logo">
+                    </div>
+                    <h3>n8n</h3>
+                    <p class="tool-category">Workflow Automation</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #dabb9e;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/claude.svg" alt="Claude" class="tool-logo">
+                    </div>
+                    <h3>Claude</h3>
+                    <p class="tool-category">Advanced LLM</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #6d28d9;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/make.svg" alt="Make" class="tool-logo">
+                    </div>
+                    <h3>Make.com</h3>
+                    <p class="tool-category">No-Code Automation</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #0ea5e9;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/kling.png" alt="Kling" class="tool-logo">
+                    </div>
+                    <h3>Kling</h3>
+                    <p class="tool-category">Creative AI</p>
+                </div>
+                <!-- Duplicate set for seamless infinite loop -->
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #ff3366;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/weavy.png" alt="Weavy" class="tool-logo">
+                    </div>
+                    <h3>Weavy</h3>
+                    <p class="tool-category">Design Workflows</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #7c3aed;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/higgsfield.png" alt="Higgsfield" class="tool-logo">
+                    </div>
+                    <h3>Higgsfield</h3>
+                    <p class="tool-category">Video Generation</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #22c55e;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/Heygen.png" alt="HeyGen" class="tool-logo">
+                    </div>
+                    <h3>HeyGen</h3>
+                    <p class="tool-category">AI Avatars</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #3b82f6;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/vapi.svg" alt="Vapi" class="tool-logo">
+                    </div>
+                    <h3>Vapi</h3>
+                    <p class="tool-category">Voice AI Agents</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #f97316;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/elevenlabs.svg" alt="ElevenLabs" class="tool-logo">
+                    </div>
+                    <h3>ElevenLabs</h3>
+                    <p class="tool-category">Voice Synthesis</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #ef4444;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/twilio.svg" alt="Twilio" class="tool-logo">
+                    </div>
+                    <h3>Twilio</h3>
+                    <p class="tool-category">Communication APIs</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #d946ef;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/suno.PNG" alt="Suno" class="tool-logo">
+                    </div>
+                    <h3>Suno</h3>
+                    <p class="tool-category">AI Music</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #a855f7;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/antigravity.png" alt="Antigravity" class="tool-logo">
+                    </div>
+                    <h3>Antigravity</h3>
+                    <p class="tool-category">AI Coding</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #ea580c;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/n8n.svg" alt="n8n" class="tool-logo">
+                    </div>
+                    <h3>n8n</h3>
+                    <p class="tool-category">Workflow Automation</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #dabb9e;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/claude.svg" alt="Claude" class="tool-logo">
+                    </div>
+                    <h3>Claude</h3>
+                    <p class="tool-category">Advanced LLM</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #6d28d9;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/make.svg" alt="Make" class="tool-logo">
+                    </div>
+                    <h3>Make.com</h3>
+                    <p class="tool-category">No-Code Automation</p>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-glow" style="--glow-color: #0ea5e9;"></div>
+                    <div class="tool-icon">
+                        <img src="./assets/logos/kling.png" alt="Kling" class="tool-logo">
+                    </div>
+                    <h3>Kling</h3>
+                    <p class="tool-category">Creative AI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="./innoworq-logo.png" alt="Innoworq Logo" class="logo-img">
+                        <span class="logo-text">Innoworq Academy</span>
+                    </a>
+                    <p>Bridging the gap between theoretical AI knowledge and industry-ready applications.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Program</h4>
+                        <a href="index.html#features">Features</a>
+                        <a href="index.html#curriculum">Curriculum</a>
+                        <a href="index.html#pricing">Pricing</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="index.html#faq">FAQ</a>
+                        <a href="mailto:contact@innoworqacademy.com">Contact Us</a>
+                        <a href="#">Partner With Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Innoworq Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeContactModal()" aria-label="Close modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="modal-header">
+                <h3>Start Your AI Journey</h3>
+                <p>Fill in your details and we'll get back to you shortly!</p>
+            </div>
+            <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message (Optional)</label>
+                    <textarea id="message" name="message" rows="4"
+                        placeholder="Tell us about your learning goals..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-large btn-full">
+                    <span>Submit Enquiry</span>
+                </button>
+            </form>
+            <div class="form-success" id="formSuccess" style="display: none;">
+                <div class="success-icon">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                        <path d="M22 4L12 14.01l-3-3" />
+                    </svg>
+                </div>
+                <h3>Thank You!</h3>
+                <p>Your enquiry has been submitted successfully. Our team will contact you shortly.</p>
+                <button class="btn btn-secondary" onclick="closeContactModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Sticky Bottom Popup -->
+    <!-- Sticky Offer Bar -->
+    <div class="offer-bar" id="stickyOfferBar">
+        <div class="offer-container">
+            <div class="offer-left">
+                <div class="offer-pricing">
+                    <span class="offer-label">FREE</span>
+                    <span class="offer-old-price">₹1,500</span>
+                    <span class="offer-new-price">₹199</span>
+                </div>
+                <div class="offer-subtitle">
+                    10 Hour AI Workshop
+                </div>
+            </div>
+            <div class="offer-right">
+                <a href="#" onclick="openContactModal(); return false;" class="btn btn-offer">
+                    Claim your spot
+                </a>
+                <button class="offer-close" onclick="closeOfferBar()" aria-label="Close offer">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

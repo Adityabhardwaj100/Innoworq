@@ -126,6 +126,8 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
 }
 
 body {
@@ -137,6 +139,43 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+/* ... (rest of styles) ... */
+
+/* Responsive Offer Bar */
+@media (max-width: 768px) {
+    .offer-container {
+        flex-wrap: wrap;
+        /* Allow wrapping */
+        justify-content: center;
+        /* Center content if wrapped */
+        gap: var(--spacing-sm);
+        padding: var(--spacing-xs) var(--spacing-md);
+    }
+
+    .offer-left {
+        align-items: center;
+        /* Center text on mobile */
+        text-align: center;
+    }
+
+    .offer-pricing {
+        font-size: 1rem;
+    }
+
+    .offer-subtitle {
+        font-size: 0.75rem;
+        display: none;
+        /* Hide subtitle on very small screens to save space? Or keep it? */
+    }
+
+    /* Let's keep subtitle but maybe make it smaller or hide if needed */
+
+    .btn-offer {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
 }
 
 a {
@@ -1739,6 +1778,15 @@ section {
     position: relative;
     transform: scale(0.9) translateY(20px);
     transition: transform 0.3s ease;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.modal-content::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
 }
 
 .modal-overlay.active .modal-content {
@@ -1889,4 +1937,369 @@ section {
     .modal-header h3 {
         font-size: 1.5rem;
     }
+}
+
+/* ==========================================
+   Workshop Page - Specific Styles
+   ========================================== */
+
+/* Partners Section */
+.partners {
+    background: var(--bg-secondary);
+    padding: var(--spacing-xxl) 0;
+}
+
+.partners-marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: var(--spacing-lg) 0;
+}
+
+.partners-marquee::before,
+.partners-marquee::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.partners-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-secondary), transparent);
+}
+
+.partners-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-secondary), transparent);
+}
+
+.partners-track {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xxl);
+    width: max-content;
+    animation: marqueeScroll 40s linear infinite;
+    padding: var(--spacing-md) 0;
+}
+
+.partners-marquee:hover .partners-track {
+    animation-play-state: paused;
+}
+
+.partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    width: 260px;
+    flex: 0 0 auto;
+    padding: var(--spacing-md);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    transition: var(--transition-base);
+}
+
+.partner-logo img {
+    max-width: 85%;
+    max-height: 75%;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.7);
+    transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+    border-color: var(--accent-purple);
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+}
+
+.partner-logo:hover img {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.1);
+}
+
+/* Testimonials Section */
+.testimonials {
+    background: var(--bg-primary);
+    padding: var(--spacing-xxl) 0;
+}
+
+.testimonials-marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: var(--spacing-lg) 0;
+}
+
+.testimonials-marquee::before,
+.testimonials-marquee::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.testimonials-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-primary), transparent);
+}
+
+.testimonials-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-primary), transparent);
+}
+
+.testimonials-track {
+    display: flex;
+    gap: var(--spacing-lg);
+    width: max-content;
+    animation: marqueeScroll 60s linear infinite;
+    padding: var(--spacing-md) 0;
+}
+
+.testimonials-marquee:hover .testimonials-track {
+    animation-play-state: paused;
+}
+
+.testimonial-card {
+    flex: 0 0 auto;
+    width: 400px;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    transition: var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-purple);
+    box-shadow: var(--shadow-glow);
+}
+
+.testimonial-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+    font-style: italic;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.author-avatar {
+    width: 48px;
+    height: 48px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    font-size: 1.2rem;
+}
+
+.author-info h4 {
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.author-info p {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+}
+
+/* ==========================================
+   Sticky Offer Bar (Dark/Glass Theme)
+   ========================================== */
+.offer-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    padding: var(--spacing-sm) 0;
+    background: rgba(10, 10, 10, 0.85);
+    /* Dark semi-transparent background */
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--glass-border);
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    visibility: hidden;
+    color: var(--text-primary);
+}
+
+.offer-bar.visible {
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.offer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.offer-pricing {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.offer-label {
+    font-weight: 800;
+    color: var(--accent-green);
+    /* Green for FREE */
+    letter-spacing: 0.02em;
+}
+
+.offer-old-price {
+    text-decoration: line-through;
+    color: var(--text-tertiary);
+    font-weight: 500;
+}
+
+.offer-new-price {
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.offer-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+.offer-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.btn-offer {
+    padding: 10px 24px;
+    background: var(--accent-green);
+    color: #000;
+    font-weight: 600;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.3);
+}
+
+.btn-offer:hover {
+    background: #4ade80;
+    /* Lighter green on hover */
+    transform: translateY(-1px);
+    box-shadow: 0 0 25px rgba(34, 197, 94, 0.5);
+}
+
+.offer-close {
+    background: transparent;
+    border: none;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.offer-close:hover {
+    color: var(--text-primary);
+}
+
+/* Responsive Offer Bar */
+@media (max-width: 768px) {
+    .offer-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--spacing-xs);
+        padding: 0 var(--spacing-sm);
+    }
+
+    .offer-left {
+        align-items: center;
+        width: 100%;
+        /* Force full width for centering */
+        margin-bottom: 4px;
+    }
+
+    .offer-pricing {
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    .offer-subtitle {
+        text-align: center;
+        font-size: 0.75rem;
+    }
+
+    .btn-offer {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+        width: 100%;
+        /* Full width button on mobile for better touch target */
+        text-align: center;
+        max-width: 280px;
+        /* But limit width */
+    }
+
+    .offer-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .offer-close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .offer-container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .offer-label {
+        font-size: 0.9rem;
+    }
+}
+
+.popup-close {
+    top: 0;
+    right: 0;
+    background: transparent;
 }

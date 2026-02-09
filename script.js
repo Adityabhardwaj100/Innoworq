@@ -190,16 +190,16 @@ function handleFormSubmit(event) {
         to_name: 'Innoworq Academy Team',
         reply_to: formData.email
     })
-    .then(function () {
-        if (form) form.style.display = 'none';
-        if (success) success.style.display = 'block';
-    })
-    .catch(function (error) {
-        console.error('Failed to send email:', error);
-        alert('Sorry, there was an error sending your enquiry.');
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = 'Submit Enquiry';
-    });
+        .then(function () {
+            if (form) form.style.display = 'none';
+            if (success) success.style.display = 'block';
+        })
+        .catch(function (error) {
+            console.error('Failed to send email:', error);
+            alert('Sorry, there was an error sending your enquiry.');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Submit Enquiry';
+        });
 }
 
 document.addEventListener('keydown', (e) => {
@@ -233,4 +233,60 @@ function initTiltEffect() {
             card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
         });
     });
+}
+
+/* ==========================================
+   Sticky Offer Bar Logic
+   ========================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    initOfferBar();
+});
+
+function initOfferBar() {
+    const offerBar = document.getElementById('stickyOfferBar');
+    if (!offerBar) return;
+
+    // FORCE SHOW for debugging - bypassing checks
+    // if (isOfferExpired()) return;
+    // if (!localStorage.getItem('offerClosed')) ...
+
+    setTimeout(() => {
+        offerBar.classList.add('visible');
+    }, 500);
+}
+
+function closeOfferBar() {
+    const offerBar = document.getElementById('stickyOfferBar');
+    if (offerBar) {
+        offerBar.classList.remove('visible');
+        localStorage.setItem('offerClosed', 'true');
+    }
+}
+window.closeOfferBar = closeOfferBar;
+
+function isOfferExpired() {
+    // 3 Days Rule: logic to check if current time > expiry
+    // If we want a fixed 3 days from "now" (simulated) or a rolling 3 days?
+    // User said "After 3 days (till Thursday)".
+    // I will use the same 'Next Thursday' logic but tailored.
+    const expiryDate = getNextThursday();
+    const now = new Date();
+    return now > expiryDate;
+}
+
+function getNextThursday() {
+    const now = new Date();
+    const resultDate = new Date(now.getTime());
+
+    const day = now.getDay();
+    let daysUntilThursday = 4 - day;
+
+    if (daysUntilThursday <= 0) {
+        daysUntilThursday += 7;
+    }
+
+    resultDate.setDate(now.getDate() + daysUntilThursday);
+    resultDate.setHours(23, 59, 59, 999);
+
+    return resultDate;
 }
